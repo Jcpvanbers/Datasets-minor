@@ -6,7 +6,7 @@ def init_analyse(df) -> None:
     print("informatie over dataframe:")
     df.info()
     print()
-    print("aantal gedupliceerde rijen: {df.duplicated().sum()}")
+    print(f"aantal gedupliceerde rijen: {df.duplicated().sum()}")
     print()
     print("Overzicht van lege waarden:")
     display(df.isna().sum())
