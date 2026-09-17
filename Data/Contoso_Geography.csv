@@ -1,0 +1,675 @@
+﻿ContinentName,GeographyKey,GeographyType,RegionCountryName
+Asia,1,Continent,""
+Asia,269,Country/Region,Armenia
+Asia,270,Country/Region,Australia
+Asia,271,Country/Region,Bhutan
+Asia,272,Country/Region,China
+Asia,273,Country/Region,India
+Asia,274,Country/Region,Iran
+Asia,275,Country/Region,Japan
+Asia,276,Country/Region,Kyrgyzstan
+Asia,277,Country/Region,Pakistan
+Asia,278,Country/Region,Singapore
+Asia,279,Country/Region,South Korea
+Asia,280,Country/Region,Syria
+Asia,281,Country/Region,Taiwan
+Asia,282,Country/Region,Thailand
+Asia,283,Country/Region,Turkmenistan
+Asia,303,State/Province,Turkmenistan
+Asia,304,State/Province,Armenia
+Asia,305,State/Province,China
+Asia,306,State/Province,Japan
+Asia,307,State/Province,Kyrgyzstan
+Asia,308,State/Province,Syria
+Asia,309,State/Province,China
+Asia,310,State/Province,Japan
+Asia,311,State/Province,China
+Asia,312,State/Province,Pakistan
+Asia,313,State/Province,Japan
+Asia,314,State/Province,Japan
+Asia,315,State/Province,Thailand
+Asia,316,State/Province,India
+Asia,317,State/Province,Australia
+Asia,318,State/Province,India
+Asia,319,State/Province,Australia
+Asia,320,State/Province,South Korea
+Asia,321,State/Province,China
+Asia,322,State/Province,Singapore
+Asia,323,State/Province,Taiwan
+Asia,324,State/Province,Iran
+Asia,325,State/Province,Bhutan
+Asia,326,State/Province,Japan
+Asia,327,State/Province,India
+Asia,328,State/Province,China
+Asia,329,State/Province,South Korea
+Asia,384,State/Province,Australia
+Asia,407,State/Province,Australia
+Asia,412,State/Province,Australia
+Asia,420,State/Province,Australia
+Asia,425,City,Australia
+Asia,468,City,Australia
+Asia,471,City,Australia
+Asia,473,City,Australia
+Asia,478,City,Australia
+Asia,487,City,Australia
+Asia,492,City,Australia
+Asia,493,City,Australia
+Asia,509,City,Australia
+Asia,510,City,Australia
+Asia,512,City,Australia
+Asia,518,City,Australia
+Asia,519,City,Australia
+Asia,531,City,Australia
+Asia,534,City,Australia
+Asia,549,City,Australia
+Asia,553,City,Australia
+Asia,554,City,Australia
+Asia,558,City,Australia
+Asia,561,City,Australia
+Asia,568,City,Australia
+Asia,596,City,Australia
+Asia,599,City,Australia
+Asia,613,City,Australia
+Asia,628,City,Australia
+Asia,632,City,Australia
+Asia,634,City,Australia
+Asia,637,City,Australia
+Asia,646,City,Australia
+Asia,648,City,Australia
+Asia,655,City,Australia
+Asia,656,City,Australia
+Asia,669,City,Australia
+Asia,679,City,Australia
+Asia,680,City,Australia
+Asia,692,City,Australia
+Asia,697,City,Australia
+Asia,699,City,Australia
+Asia,706,City,Australia
+Asia,708,City,Turkmenistan
+Asia,709,City,Thailand
+Asia,710,City,China
+Asia,711,City,Kyrgyzstan
+Asia,712,City,South Korea
+Asia,713,City,Australia
+Asia,714,City,Syria
+Asia,715,City,China
+Asia,716,City,China
+Asia,717,City,Pakistan
+Asia,718,City,India
+Asia,719,City,Japan
+Asia,720,City,Japan
+Asia,721,City,India
+Asia,722,City,Japan
+Asia,723,City,India
+Asia,724,City,Japan
+Asia,725,City,Japan
+Asia,726,City,South Korea
+Asia,727,City,China
+Asia,728,City,Singapore
+Asia,729,City,Taiwan
+Asia,730,City,Iran
+Asia,731,City,Bhutan
+Asia,732,City,Japan
+Asia,733,City,China
+Asia,734,City,Armenia
+Asia,735,City,Japan
+Europe,2,Continent,""
+Europe,284,Country/Region,Denmark
+Europe,285,Country/Region,France
+Europe,286,Country/Region,Germany
+Europe,287,Country/Region,Greece
+Europe,288,Country/Region,the Netherlands
+Europe,289,Country/Region,Ireland
+Europe,290,Country/Region,Italy
+Europe,291,Country/Region,Malta
+Europe,292,Country/Region,Poland
+Europe,293,Country/Region,Portugal
+Europe,294,Country/Region,Romania
+Europe,295,Country/Region,Russia
+Europe,296,Country/Region,Slovenia
+Europe,297,Country/Region,Spain
+Europe,298,Country/Region,Sweden
+Europe,299,Country/Region,Switzerland
+Europe,300,Country/Region,United Kingdom
+Europe,330,State/Province,France
+Europe,331,State/Province,France
+Europe,332,State/Province,Germany
+Europe,333,State/Province,Germany
+Europe,334,State/Province,Germany
+Europe,335,State/Province,Switzerland
+Europe,336,State/Province,Romania
+Europe,337,State/Province,Greece
+Europe,338,State/Province,United Kingdom
+Europe,339,State/Province,Germany
+Europe,340,State/Province,France
+Europe,341,State/Province,Ireland
+Europe,342,State/Province,Portugal
+Europe,343,State/Province,Slovenia
+Europe,344,State/Province,Italy
+Europe,345,State/Province,Spain
+Europe,346,State/Province,France
+Europe,347,State/Province,Russia
+Europe,348,State/Province,Russia
+Europe,349,State/Province,the Netherlands
+Europe,350,State/Province,Germany
+Europe,351,State/Province,Germany
+Europe,352,State/Province,Russia
+Europe,353,State/Province,France
+Europe,354,State/Province,France
+Europe,355,State/Province,Italy
+Europe,356,State/Province,Italy
+Europe,357,State/Province,Germany
+Europe,358,State/Province,France
+Europe,359,State/Province,Italy
+Europe,360,State/Province,United Kingdom
+Europe,361,State/Province,Denmark
+Europe,362,State/Province,Sweden
+Europe,363,State/Province,Malta
+Europe,364,State/Province,Italy
+Europe,365,State/Province,Poland
+Europe,385,State/Province,Germany
+Europe,387,State/Province,France
+Europe,388,State/Province,Germany
+Europe,389,State/Province,France
+Europe,391,State/Province,France
+Europe,393,State/Province,France
+Europe,395,State/Province,France
+Europe,398,State/Province,France
+Europe,399,State/Province,France
+Europe,400,State/Province,France
+Europe,402,State/Province,France
+Europe,403,State/Province,France
+Europe,404,State/Province,Germany
+Europe,405,State/Province,France
+Europe,410,State/Province,France
+Europe,413,State/Province,France
+Europe,414,State/Province,France
+Europe,416,State/Province,France
+Europe,418,State/Province,France
+Europe,419,State/Province,Germany
+Europe,423,City,United Kingdom
+Europe,426,City,United Kingdom
+Europe,435,City,France
+Europe,437,City,Germany
+Europe,439,City,United Kingdom
+Europe,447,City,United Kingdom
+Europe,449,City,United Kingdom
+Europe,454,City,France
+Europe,459,City,France
+Europe,474,City,Germany
+Europe,476,City,France
+Europe,480,City,Germany
+Europe,481,City,United Kingdom
+Europe,482,City,Germany
+Europe,483,City,Germany
+Europe,485,City,United Kingdom
+Europe,486,City,United Kingdom
+Europe,491,City,Germany
+Europe,496,City,Germany
+Europe,497,City,United Kingdom
+Europe,498,City,United Kingdom
+Europe,501,City,United Kingdom
+Europe,503,City,France
+Europe,504,City,France
+Europe,506,City,United Kingdom
+Europe,513,City,Germany
+Europe,515,City,Germany
+Europe,517,City,Germany
+Europe,521,City,Germany
+Europe,524,City,France
+Europe,525,City,United Kingdom
+Europe,528,City,France
+Europe,529,City,France
+Europe,530,City,France
+Europe,532,City,United Kingdom
+Europe,533,City,Germany
+Europe,539,City,France
+Europe,540,City,France
+Europe,541,City,United Kingdom
+Europe,542,City,Germany
+Europe,543,City,France
+Europe,544,City,France
+Europe,545,City,France
+Europe,548,City,France
+Europe,555,City,Germany
+Europe,556,City,Germany
+Europe,557,City,France
+Europe,563,City,France
+Europe,564,City,France
+Europe,565,City,United Kingdom
+Europe,567,City,United Kingdom
+Europe,569,City,Germany
+Europe,572,City,United Kingdom
+Europe,574,City,United Kingdom
+Europe,576,City,United Kingdom
+Europe,585,City,United Kingdom
+Europe,586,City,Germany
+Europe,587,City,United Kingdom
+Europe,588,City,United Kingdom
+Europe,590,City,Germany
+Europe,591,City,France
+Europe,592,City,France
+Europe,595,City,Germany
+Europe,608,City,United Kingdom
+Europe,615,City,France
+Europe,616,City,France
+Europe,621,City,France
+Europe,622,City,France
+Europe,623,City,Germany
+Europe,624,City,France
+Europe,626,City,Germany
+Europe,629,City,Germany
+Europe,635,City,Germany
+Europe,638,City,United Kingdom
+Europe,639,City,Germany
+Europe,640,City,Germany
+Europe,641,City,Germany
+Europe,649,City,Germany
+Europe,650,City,France
+Europe,651,City,United Kingdom
+Europe,654,City,United Kingdom
+Europe,657,City,France
+Europe,659,City,United Kingdom
+Europe,661,City,France
+Europe,662,City,Germany
+Europe,664,City,Germany
+Europe,666,City,United Kingdom
+Europe,672,City,France
+Europe,673,City,United Kingdom
+Europe,674,City,Germany
+Europe,676,City,United Kingdom
+Europe,681,City,France
+Europe,683,City,Germany
+Europe,684,City,France
+Europe,685,City,France
+Europe,687,City,Germany
+Europe,696,City,Germany
+Europe,698,City,United Kingdom
+Europe,700,City,France
+Europe,702,City,France
+Europe,704,City,United Kingdom
+Europe,705,City,United Kingdom
+Europe,736,City,the Netherlands
+Europe,737,City,Greece
+Europe,738,City,United Kingdom
+Europe,739,City,Germany
+Europe,740,City,Switzerland
+Europe,741,City,Romania
+Europe,742,City,United Kingdom
+Europe,743,City,United Kingdom
+Europe,745,City,Denmark
+Europe,746,City,Ireland
+Europe,747,City,Germany
+Europe,748,City,United Kingdom
+Europe,749,City,Italy
+Europe,750,City,Germany
+Europe,751,City,United Kingdom
+Europe,752,City,Germany
+Europe,753,City,United Kingdom
+Europe,754,City,Germany
+Europe,755,City,United Kingdom
+Europe,756,City,Germany
+Europe,757,City,Portugal
+Europe,758,City,Slovenia
+Europe,759,City,France
+Europe,760,City,Spain
+Europe,761,City,United Kingdom
+Europe,762,City,France
+Europe,763,City,Italy
+Europe,764,City,Russia
+Europe,765,City,Germany
+Europe,766,City,France
+Europe,767,City,France
+Europe,768,City,Russia
+Europe,769,City,Germany
+Europe,770,City,Germany
+Europe,771,City,Italy
+Europe,772,City,Russia
+Europe,773,City,Sweden
+Europe,774,City,United Kingdom
+Europe,775,City,France
+Europe,776,City,Italy
+Europe,777,City,France
+Europe,778,City,Malta
+Europe,779,City,Italy
+Europe,780,City,Poland
+Europe,781,City,United Kingdom
+North America,3,Continent,""
+North America,301,Country/Region,Canada
+North America,302,Country/Region,United States
+North America,366,State/Province,United States
+North America,367,State/Province,Canada
+North America,368,State/Province,Canada
+North America,369,State/Province,United States
+North America,370,State/Province,United States
+North America,371,State/Province,United States
+North America,372,State/Province,United States
+North America,373,State/Province,United States
+North America,374,State/Province,United States
+North America,375,State/Province,United States
+North America,376,State/Province,United States
+North America,377,State/Province,Canada
+North America,378,State/Province,Canada
+North America,379,State/Province,United States
+North America,380,State/Province,United States
+North America,381,State/Province,United States
+North America,382,State/Province,United States
+North America,383,State/Province,United States
+North America,386,State/Province,United States
+North America,390,State/Province,United States
+North America,392,State/Province,United States
+North America,394,State/Province,United States
+North America,396,State/Province,United States
+North America,397,State/Province,United States
+North America,401,State/Province,United States
+North America,406,State/Province,United States
+North America,408,State/Province,United States
+North America,409,State/Province,United States
+North America,411,State/Province,United States
+North America,415,State/Province,United States
+North America,417,State/Province,United States
+North America,421,State/Province,United States
+North America,422,State/Province,United States
+North America,424,City,United States
+North America,430,City,United States
+North America,431,City,United States
+North America,432,City,United States
+North America,433,City,United States
+North America,434,City,United States
+North America,436,City,United States
+North America,438,City,United States
+North America,440,City,United States
+North America,441,City,United States
+North America,442,City,United States
+North America,443,City,United States
+North America,444,City,United States
+North America,445,City,United States
+North America,446,City,Canada
+North America,448,City,United States
+North America,450,City,United States
+North America,451,City,United States
+North America,452,City,United States
+North America,453,City,United States
+North America,455,City,United States
+North America,456,City,Canada
+North America,457,City,United States
+North America,458,City,United States
+North America,460,City,United States
+North America,461,City,United States
+North America,462,City,United States
+North America,463,City,United States
+North America,464,City,United States
+North America,465,City,United States
+North America,466,City,United States
+North America,467,City,Canada
+North America,469,City,United States
+North America,470,City,United States
+North America,472,City,United States
+North America,475,City,United States
+North America,479,City,United States
+North America,488,City,United States
+North America,490,City,Canada
+North America,494,City,United States
+North America,495,City,United States
+North America,499,City,Canada
+North America,500,City,United States
+North America,502,City,United States
+North America,505,City,United States
+North America,507,City,United States
+North America,508,City,United States
+North America,511,City,Canada
+North America,516,City,United States
+North America,520,City,United States
+North America,522,City,United States
+North America,523,City,United States
+North America,527,City,United States
+North America,535,City,United States
+North America,536,City,United States
+North America,537,City,United States
+North America,538,City,United States
+North America,546,City,United States
+North America,547,City,United States
+North America,550,City,Canada
+North America,551,City,United States
+North America,552,City,United States
+North America,559,City,United States
+North America,560,City,United States
+North America,562,City,Canada
+North America,566,City,United States
+North America,570,City,United States
+North America,571,City,Canada
+North America,573,City,United States
+North America,575,City,United States
+North America,577,City,United States
+North America,578,City,United States
+North America,579,City,United States
+North America,580,City,United States
+North America,581,City,United States
+North America,582,City,United States
+North America,583,City,United States
+North America,584,City,United States
+North America,593,City,United States
+North America,594,City,United States
+North America,597,City,United States
+North America,598,City,Canada
+North America,600,City,United States
+North America,601,City,United States
+North America,602,City,United States
+North America,603,City,United States
+North America,604,City,United States
+North America,605,City,United States
+North America,606,City,United States
+North America,607,City,United States
+North America,609,City,United States
+North America,610,City,United States
+North America,611,City,United States
+North America,612,City,United States
+North America,614,City,United States
+North America,617,City,United States
+North America,618,City,United States
+North America,619,City,United States
+North America,620,City,United States
+North America,625,City,United States
+North America,627,City,United States
+North America,631,City,United States
+North America,633,City,United States
+North America,642,City,United States
+North America,643,City,United States
+North America,644,City,United States
+North America,645,City,United States
+North America,647,City,Canada
+North America,652,City,United States
+North America,653,City,United States
+North America,658,City,United States
+North America,660,City,United States
+North America,665,City,Canada
+North America,667,City,United States
+North America,668,City,Canada
+North America,670,City,United States
+North America,671,City,Canada
+North America,675,City,Canada
+North America,677,City,United States
+North America,678,City,United States
+North America,682,City,Canada
+North America,686,City,United States
+North America,688,City,United States
+North America,689,City,United States
+North America,690,City,United States
+North America,691,City,United States
+North America,693,City,United States
+North America,694,City,United States
+North America,695,City,Canada
+North America,701,City,Canada
+North America,703,City,United States
+North America,707,City,United States
+North America,782,City,United States
+North America,783,City,United States
+North America,784,City,United States
+North America,785,City,United States
+North America,786,City,United States
+North America,787,City,United States
+North America,788,City,United States
+North America,789,City,United States
+North America,790,City,United States
+North America,791,City,United States
+North America,792,City,United States
+North America,793,City,United States
+North America,794,City,United States
+North America,795,City,United States
+North America,796,City,United States
+North America,797,City,United States
+North America,798,City,United States
+North America,799,City,United States
+North America,800,City,United States
+North America,801,City,United States
+North America,802,City,United States
+North America,803,City,United States
+North America,804,City,United States
+North America,805,City,United States
+North America,806,City,United States
+North America,807,City,United States
+North America,808,City,United States
+North America,809,City,United States
+North America,810,City,United States
+North America,811,City,United States
+North America,812,City,United States
+North America,813,City,United States
+North America,814,City,United States
+North America,815,City,United States
+North America,816,City,United States
+North America,817,City,United States
+North America,818,City,United States
+North America,819,City,United States
+North America,820,City,United States
+North America,821,City,United States
+North America,822,City,United States
+North America,823,City,United States
+North America,824,City,United States
+North America,825,City,United States
+North America,826,City,United States
+North America,827,City,United States
+North America,828,City,United States
+North America,829,City,United States
+North America,830,City,United States
+North America,831,City,United States
+North America,832,City,United States
+North America,833,City,United States
+North America,834,City,United States
+North America,835,City,United States
+North America,836,City,United States
+North America,837,City,United States
+North America,838,City,United States
+North America,839,City,United States
+North America,840,City,United States
+North America,841,City,United States
+North America,842,City,United States
+North America,843,City,United States
+North America,844,City,United States
+North America,845,City,United States
+North America,846,City,United States
+North America,847,City,United States
+North America,848,City,United States
+North America,849,City,United States
+North America,850,City,United States
+North America,851,City,United States
+North America,852,City,United States
+North America,853,City,United States
+North America,854,City,United States
+North America,855,City,United States
+North America,856,City,United States
+North America,857,City,United States
+North America,858,City,United States
+North America,859,City,United States
+North America,860,City,United States
+North America,861,City,United States
+North America,862,City,United States
+North America,863,City,United States
+North America,864,City,United States
+North America,865,City,United States
+North America,866,City,United States
+North America,867,City,United States
+North America,868,City,United States
+North America,869,City,United States
+North America,870,City,United States
+North America,871,City,United States
+North America,872,City,United States
+North America,873,City,United States
+North America,874,City,United States
+North America,875,City,United States
+North America,876,City,United States
+North America,877,City,United States
+North America,878,City,United States
+North America,879,City,United States
+North America,880,City,United States
+North America,881,City,Canada
+North America,882,City,United States
+North America,883,City,United States
+North America,884,City,United States
+North America,885,City,United States
+North America,886,City,United States
+North America,887,City,United States
+North America,888,City,United States
+North America,889,City,United States
+North America,890,City,United States
+North America,891,City,United States
+North America,892,City,United States
+North America,893,City,United States
+North America,894,City,United States
+North America,895,City,United States
+North America,896,City,United States
+North America,897,City,United States
+North America,898,City,United States
+North America,899,City,United States
+North America,900,City,United States
+North America,901,City,United States
+North America,902,City,United States
+North America,903,City,Canada
+North America,904,City,United States
+North America,905,City,United States
+North America,906,City,United States
+North America,907,City,United States
+North America,908,City,United States
+North America,909,City,United States
+North America,910,City,United States
+North America,911,City,United States
+North America,912,City,United States
+North America,913,City,United States
+North America,914,City,United States
+North America,915,City,United States
+North America,916,City,United States
+North America,917,City,United States
+North America,918,City,United States
+North America,919,City,United States
+North America,920,City,United States
+North America,921,City,United States
+North America,922,City,United States
+North America,923,City,United States
+North America,924,City,United States
+North America,925,City,United States
+North America,926,City,United States
+North America,927,City,United States
+North America,928,City,United States
+North America,929,City,United States
+North America,930,City,United States
+North America,931,City,United States
+North America,932,City,United States
+North America,933,City,United States
+North America,934,City,United States
+North America,935,City,United States
+North America,936,City,United States
+North America,937,City,United States
+North America,938,City,United States
+North America,939,City,United States
+North America,940,City,United States
+North America,941,City,United States
+North America,942,City,Canada
+North America,943,City,United States
+North America,944,City,United States
+North America,945,City,United States
+North America,946,City,United States
+North America,947,City,United States
+North America,948,City,United States
+North America,949,City,United States
+North America,950,City,United States
+North America,951,City,United States
+North America,952,City,United States

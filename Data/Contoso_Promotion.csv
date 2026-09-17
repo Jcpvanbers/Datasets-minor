@@ -1,0 +1,29 @@
+﻿DiscountPercent,Year,Quarter,Month,Day,PromotionKey,PromotionLabel,PromotionName,Year,Quarter,Month,Day
+0.05,2011,Qtr 1,March,31,2,002,North America Spring Promotion,2011,Qtr 1,January,1
+0.2,2011,Qtr 2,April,30,6,006,Asian Spring Promotion,2011,Qtr 1,February,1
+0.07,2011,Qtr 2,April,30,8,008,European Spring Promotion,2011,Qtr 1,February,1
+0.1,2011,Qtr 2,June,30,7,007,Asian Summer Promotion,2011,Qtr 2,May,1
+0.1,2011,Qtr 3,September,30,3,003,North America Back-to-School Promotion,2011,Qtr 3,July,1
+0.1,2011,Qtr 3,September,30,9,009,European Back-to-Scholl Promotion,2011,Qtr 3,August,1
+0.2,2011,Qtr 4,December,31,4,004,North America Holiday Promotion,2011,Qtr 4,November,1
+0.15,2012,Qtr 1,January,31,5,005,Asian Holiday Promotion,2011,Qtr 4,November,1
+0.2,2012,Qtr 1,January,31,10,010,European Holiday Promotion,2011,Qtr 4,October,1
+0.05,2012,Qtr 1,March,31,11,011,North America Spring Promotion,2012,Qtr 1,January,1
+0.2,2012,Qtr 2,April,30,15,015,Asian Spring Promotion,2012,Qtr 1,February,1
+0.07,2012,Qtr 2,April,30,17,017,European Spring Promotion,2012,Qtr 1,February,1
+0.1,2012,Qtr 2,June,30,16,016,Asian Summer Promotion,2012,Qtr 2,May,1
+0.1,2012,Qtr 3,September,30,12,012,North America Back-to-School Promotion,2012,Qtr 3,July,1
+0.1,2012,Qtr 3,September,30,18,018,European Back-to-Scholl Promotion,2012,Qtr 3,August,1
+0.2,2012,Qtr 4,December,31,13,013,North America Holiday Promotion,2012,Qtr 4,November,1
+0.15,2013,Qtr 1,January,31,14,014,Asian Holiday Promotion,2012,Qtr 4,November,1
+0.2,2013,Qtr 1,January,31,19,019,European Holiday Promotion,2012,Qtr 4,October,1
+0.2,2013,Qtr 2,April,30,24,024,Asian Spring Promotion,2013,Qtr 1,February,1
+0.07,2013,Qtr 2,April,30,26,026,European Spring Promotion,2013,Qtr 1,February,1
+0.1,2013,Qtr 2,June,30,25,025,Asian Summer Promotion,2013,Qtr 2,May,1
+0.1,2013,Qtr 3,September,30,21,021,North America Back-to-School Promotion,2013,Qtr 3,July,1
+0.1,2013,Qtr 3,September,30,27,027,European Back-to-Scholl Promotion,2013,Qtr 3,August,1
+0.2,2013,Qtr 4,December,31,22,022,North America Holiday Promotion,2013,Qtr 4,November,1
+0.15,2014,Qtr 1,January,31,23,023,Asian Holiday Promotion,2013,Qtr 4,November,1
+0.2,2014,Qtr 1,January,31,28,028,European Holiday Promotion,2013,Qtr 4,October,1
+0.05,2014,Qtr 1,March,31,20,020,North America Spring Promotion,2013,Qtr 1,January,1
+0,2014,Qtr 4,December,31,1,001,No Discount,2007,Qtr 1,January,1
