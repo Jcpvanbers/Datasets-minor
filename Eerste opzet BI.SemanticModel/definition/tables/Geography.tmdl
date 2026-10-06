@@ -1,0 +1,79 @@
+table Geography
+	lineageTag: c6adf223-366e-47f0-8bf2-4c286c6a6d97
+
+	column Contintent
+		dataType: string
+		lineageTag: 90ef6c68-30b5-4156-9e7c-a0d1a9e9c70f
+		summarizeBy: none
+		sourceColumn: Contintent
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column GeographyKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d70bacbe-e036-46c0-a603-87f40ef24d81
+		summarizeBy: none
+		sourceColumn: GeographyKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column GeographyType
+		dataType: string
+		isHidden
+		lineageTag: ba4501f8-11a0-4aa7-8cd5-eeebaa798c07
+		summarizeBy: none
+		sourceColumn: GeographyType
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Country Name'
+		dataType: string
+		lineageTag: 9d520571-59b2-4f4e-adac-ae36b8b9cabf
+		summarizeBy: none
+		sourceColumn: Country Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column __index_level_0__
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6b1e088d-e28d-4255-911b-c44053e066a2
+		summarizeBy: sum
+		sourceColumn: __index_level_0__
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Geography = m
+		mode: import
+		source =
+				let
+				  Bron = Folder.Files("C:\Users\x3ri0\Desktop\Datasets minor\PQ"),
+				  #"Filtered rows" = Table.SelectRows(Bron, each [Extension] = ".parquet"),
+				  #"Filtered hidden files" = Table.SelectRows(#"Filtered rows", each [Attributes]?[Hidden]? <> true),
+				  #"Added custom" = let
+				    rootPath = Text.TrimEnd(Value.Metadata(Value.Type(#"Filtered hidden files"))[FileSystemTable.RootPath]?, "\"),
+				    combinePaths = (path1, path2) => Text.Combine({Text.TrimEnd(path1, "\"), path2}, "\"),
+				    getRelativePath = (path, relativeTo) => Text.Middle(path, Text.Length(relativeTo) + 1)
+				in
+				    Table.AddColumn(#"Filtered hidden files", "Relative Path", each getRelativePath(combinePaths([Folder Path], [Name]), rootPath), type text),
+				  #"Invoke custom function" = Table.AddColumn(#"Added custom", "Transform file", each #"Transform file"([Content])),
+				  #"Drill down" = #"Invoke custom function"{[#"Folder Path" = "C:\Users\x3ri0\Desktop\Datasets minor\PQ\", Name = "Contoso_geography.parquet"]}[Transform file],
+				    #"Renamed Columns" = Table.RenameColumns(#"Drill down",{{"ContinentName", "Contintent"}, {"RegionCountryName", "Country Name"}})
+				in
+				  #"Renamed Columns"
+
+	annotation PBI_ResultType = Table
+

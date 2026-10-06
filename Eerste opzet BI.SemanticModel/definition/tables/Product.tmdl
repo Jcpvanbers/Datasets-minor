@@ -1,0 +1,145 @@
+table Product
+	lineageTag: 3ee88efb-754c-4b34-8c58-4e9ac7d02b20
+
+	column Brand
+		dataType: string
+		lineageTag: c063dbb6-d3c2-4008-bf4b-6c3b78c1740b
+		summarizeBy: none
+		sourceColumn: Brand
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Class
+		dataType: string
+		lineageTag: 53eb679a-4fad-47ef-bb6a-a37a1313ca63
+		summarizeBy: none
+		sourceColumn: Class
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Manufacturer
+		dataType: string
+		lineageTag: c36b53c6-34f7-420b-845b-25df73fb91cd
+		summarizeBy: none
+		sourceColumn: Manufacturer
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Description'
+		dataType: string
+		lineageTag: 8f62c13b-0f5d-447f-9632-f049f2b6d980
+		summarizeBy: none
+		sourceColumn: Product Description
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e89aeb7c-1c00-4659-a52d-1975db157a35
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Name(original)'
+		dataType: string
+		isHidden
+		lineageTag: 986108b9-da44-4f5e-ae3b-01774d2b2ae7
+		summarizeBy: none
+		sourceColumn: Product Name(original)
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Subcategory'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 36a13997-ec38-482a-a2ba-9350c1b74b88
+		summarizeBy: none
+		sourceColumn: Product Subcategory
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Unit Cost'
+		dataType: double
+		isHidden
+		lineageTag: e76e81d6-cef9-4e92-bf26-1c89fc6dc9f8
+		summarizeBy: sum
+		sourceColumn: Unit Cost
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Unit Price'
+		dataType: double
+		isHidden
+		lineageTag: 48dc9174-eefc-4a4f-962c-ddf1228a256b
+		summarizeBy: sum
+		sourceColumn: Unit Price
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Product Color'
+		dataType: string
+		lineageTag: 34e8ed09-abb8-41e6-a381-01da3d6d3d2c
+		summarizeBy: none
+		sourceColumn: Product Color
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Name'
+		dataType: string
+		lineageTag: 792238c0-dea5-4353-8a5d-94f6ebaeed07
+		summarizeBy: none
+		sourceColumn: Product Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Product = m
+		mode: import
+		source =
+				let
+				  Bron = Folder.Files("C:\Users\x3ri0\Desktop\Datasets minor\PQ"),
+				  #"Filtered rows" = Table.SelectRows(Bron, each [Extension] = ".parquet"),
+				  #"Filtered hidden files" = Table.SelectRows(#"Filtered rows", each [Attributes]?[Hidden]? <> true),
+				  #"Added custom" = let
+				    rootPath = Text.TrimEnd(Value.Metadata(Value.Type(#"Filtered hidden files"))[FileSystemTable.RootPath]?, "\"),
+				    combinePaths = (path1, path2) => Text.Combine({Text.TrimEnd(path1, "\"), path2}, "\"),
+				    getRelativePath = (path, relativeTo) => Text.Middle(path, Text.Length(relativeTo) + 1)
+				in
+				    Table.AddColumn(#"Filtered hidden files", "Relative Path", each getRelativePath(combinePaths([Folder Path], [Name]), rootPath), type text),
+				  #"Invoke custom function" = Table.AddColumn(#"Added custom", "Transform file", each #"Transform file"([Content])),
+				  #"Drill down" = #"Invoke custom function"{[#"Folder Path" = "C:\Users\x3ri0\Desktop\Datasets minor\PQ\", Name = "Contoso_product.parquet"]}[Transform file],
+				    #"Renamed Columns" = Table.RenameColumns(#"Drill down",{{"BrandName", "Brand"}, {"ClassName", "Class"}, {"ProductColor", "Product Color"}, {"ProductDescription", "Product Description"}, {"ProductName", "Product Name(original)"}, {"ProductNameNoColor", "Product Name"}, {"ProductSubcategoryKey", "Product Subcategory"}, {"UnitCost", "Unit Cost"}, {"UnitPrice", "Unit Price"}})
+				in
+				  #"Renamed Columns"
+
+	annotation PBI_ResultType = Table
+

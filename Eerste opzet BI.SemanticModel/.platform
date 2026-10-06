@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Eerste opzet BI"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "8ce1b105-b50a-4035-af60-da88c6526843"
+  }
+}

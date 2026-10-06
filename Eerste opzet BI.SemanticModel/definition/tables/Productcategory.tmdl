@@ -1,0 +1,68 @@
+table Productcategory
+	lineageTag: eeff24c9-05e7-4111-b2e6-75876c008833
+
+	column ProductCategoryKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 03a59549-1ebb-4030-b783-924a69877b9e
+		summarizeBy: none
+		sourceColumn: ProductCategoryKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Subcategory'
+		dataType: string
+		lineageTag: 11a293d4-0767-4805-8eca-37f7d926d3f5
+		summarizeBy: none
+		sourceColumn: Product Subcategory
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductSubcategoryKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 3c3610ef-b0a3-4e81-a8f4-01ee14ee64b2
+		summarizeBy: none
+		sourceColumn: ProductSubcategoryKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Category'
+		dataType: string
+		lineageTag: 79f313ef-4f18-45bc-9c49-15cd9342454b
+		summarizeBy: none
+		sourceColumn: Product Category
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Productcategory = m
+		mode: import
+		source =
+				let
+				  Bron = Folder.Files("C:\Users\x3ri0\Desktop\Datasets minor\PQ"),
+				  #"Filtered rows" = Table.SelectRows(Bron, each [Extension] = ".parquet"),
+				  #"Filtered hidden files" = Table.SelectRows(#"Filtered rows", each [Attributes]?[Hidden]? <> true),
+				  #"Added custom" = let
+				    rootPath = Text.TrimEnd(Value.Metadata(Value.Type(#"Filtered hidden files"))[FileSystemTable.RootPath]?, "\"),
+				    combinePaths = (path1, path2) => Text.Combine({Text.TrimEnd(path1, "\"), path2}, "\"),
+				    getRelativePath = (path, relativeTo) => Text.Middle(path, Text.Length(relativeTo) + 1)
+				in
+				    Table.AddColumn(#"Filtered hidden files", "Relative Path", each getRelativePath(combinePaths([Folder Path], [Name]), rootPath), type text),
+				  #"Invoke custom function" = Table.AddColumn(#"Added custom", "Transform file", each #"Transform file"([Content])),
+				  #"Drill down" = #"Invoke custom function"{[#"Folder Path" = "C:\Users\x3ri0\Desktop\Datasets minor\PQ\", Name = "Contoso_productcat.parquet"]}[Transform file],
+				    #"Renamed Columns" = Table.RenameColumns(#"Drill down",{{"ProductCategory", "Product Category"}, {"ProductSubcategory", "Product Subcategory"}})
+				in
+				  #"Renamed Columns"
+
+	annotation PBI_ResultType = Table
+

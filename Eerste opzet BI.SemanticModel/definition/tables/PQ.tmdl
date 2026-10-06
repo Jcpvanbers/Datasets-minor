@@ -1,0 +1,133 @@
+table PQ
+	isHidden
+	lineageTag: 85290271-951d-4e57-b19b-2bfd926d7370
+
+	column Name
+		dataType: string
+		isHidden
+		lineageTag: 3b927ab1-6efd-4e8a-903d-15b72c0f32f0
+		summarizeBy: none
+		sourceColumn: Name
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Extension
+		dataType: string
+		isHidden
+		lineageTag: 1646ac63-c85f-4326-a63e-02928c784377
+		summarizeBy: none
+		sourceColumn: Extension
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date accessed'
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 3130ffbd-4a62-453b-bdf5-5f27c3e84ea5
+		summarizeBy: none
+		sourceColumn: Date accessed
+
+		variation Variatie
+			isDefault
+			relationship: 2c0d2f63-e593-46d0-9d51-d0224aca2386
+			defaultHierarchy: LocalDateTable_b4a18f8d-824c-4623-941f-ea6231670336.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date modified'
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 0cd3ef06-2152-4439-87b0-03d3654e2c99
+		summarizeBy: none
+		sourceColumn: Date modified
+
+		variation Variatie
+			isDefault
+			relationship: dd36702c-d823-458e-a887-283a3633e7da
+			defaultHierarchy: LocalDateTable_16cda820-82ee-4514-a33a-013db0a4831d.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date created'
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 719f2bc3-b329-447c-af9c-d2a5082d1232
+		summarizeBy: none
+		sourceColumn: Date created
+
+		variation Variatie
+			isDefault
+			relationship: 2bbf0060-f9f8-4815-8f0e-bc71fd16a744
+			defaultHierarchy: LocalDateTable_45d83709-a0d0-4371-b49e-573459698f9b.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Folder Path'
+		dataType: string
+		isHidden
+		lineageTag: 683e241a-58c5-4d34-aceb-84802fead91d
+		summarizeBy: none
+		sourceColumn: Folder Path
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Relative Path'
+		dataType: string
+		isHidden
+		lineageTag: 671705cd-dffa-42a7-83be-a95f6cd687f2
+		summarizeBy: none
+		sourceColumn: Relative Path
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Transform file'
+		dataType: string
+		isHidden
+		lineageTag: a01bbed8-da4c-4375-908c-bd50ea8f7392
+		summarizeBy: none
+		sourceColumn: Transform file
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition PQ = m
+		mode: import
+		source =
+				let
+				    Bron = Folder.Files("C:\Users\x3ri0\Desktop\Datasets minor\PQ"),
+				  #"Filtered rows" = Table.SelectRows(Bron, each ([Extension] = ".parquet")),
+				  #"Filtered hidden files" = Table.SelectRows(#"Filtered rows", each [Attributes]?[Hidden]? <> true),
+				  #"Added custom" = let
+				    rootPath = Text.TrimEnd(Value.Metadata(Value.Type(#"Filtered hidden files"))[FileSystemTable.RootPath]?, "\"),
+				    combinePaths = (path1, path2) => Text.Combine({Text.TrimEnd(path1, "\"), path2}, "\"),
+				    getRelativePath = (path, relativeTo) => Text.Middle(path, Text.Length(relativeTo) + 1)
+				in
+				    Table.AddColumn(#"Filtered hidden files", "Relative Path", each getRelativePath(combinePaths([Folder Path], [Name]), rootPath), type text),
+				  #"Invoke custom function" = Table.AddColumn(#"Added custom", "Transform file", each #"Transform file"([Content]))
+				in
+				    #"Invoke custom function"
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navigatie
+
+	annotation PBI_ResultType = Table
+

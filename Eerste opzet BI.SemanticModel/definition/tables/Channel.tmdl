@@ -1,0 +1,46 @@
+table Channel
+	lineageTag: c1394a18-462a-4b0a-9bdc-50fe6e9c28ca
+
+	column ChannelKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d4e36a93-721d-4c74-849d-f3c35817505b
+		summarizeBy: none
+		sourceColumn: ChannelKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Channel
+		dataType: string
+		lineageTag: 3b56edd5-d399-455b-94e8-deec338a41aa
+		summarizeBy: none
+		sourceColumn: Channel
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Channel = m
+		mode: import
+		source =
+				let
+				  Bron = Folder.Files("C:\Users\x3ri0\Desktop\Datasets minor\PQ"),
+				  #"Filtered rows" = Table.SelectRows(Bron, each [Extension] = ".parquet"),
+				  #"Filtered hidden files" = Table.SelectRows(#"Filtered rows", each [Attributes]?[Hidden]? <> true),
+				  #"Added custom" = let
+				    rootPath = Text.TrimEnd(Value.Metadata(Value.Type(#"Filtered hidden files"))[FileSystemTable.RootPath]?, "\"),
+				    combinePaths = (path1, path2) => Text.Combine({Text.TrimEnd(path1, "\"), path2}, "\"),
+				    getRelativePath = (path, relativeTo) => Text.Middle(path, Text.Length(relativeTo) + 1)
+				in
+				    Table.AddColumn(#"Filtered hidden files", "Relative Path", each getRelativePath(combinePaths([Folder Path], [Name]), rootPath), type text),
+				  #"Invoke custom function" = Table.AddColumn(#"Added custom", "Transform file", each #"Transform file"([Content])),
+				  #"Drill down" = #"Invoke custom function"{[#"Folder Path" = "C:\Users\x3ri0\Desktop\Datasets minor\PQ\", Name = "Contoso_channel.parquet"]}[Transform file],
+				    #"Renamed Columns" = Table.RenameColumns(#"Drill down",{{"ChannelName", "Channel"}})
+				in
+				  #"Renamed Columns"
+
+	annotation PBI_ResultType = Table
+

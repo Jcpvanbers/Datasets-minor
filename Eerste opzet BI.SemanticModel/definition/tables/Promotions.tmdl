@@ -1,0 +1,218 @@
+table Promotions
+	lineageTag: 9c75f010-97a6-416a-b6a7-652d6fadbfbf
+
+	column 'Discount Percentage'
+		dataType: double
+		lineageTag: 9423a7dd-777b-424f-ae9b-21ad2de47695
+		summarizeBy: sum
+		sourceColumn: Discount Percentage
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EndYear
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 3c5b49a7-8835-4714-9d4a-09eff2c88d5e
+		summarizeBy: sum
+		sourceColumn: EndYear
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EndQuarter
+		dataType: string
+		isHidden
+		lineageTag: 501d05b2-78f8-4c98-8935-4906c20dd3fd
+		summarizeBy: none
+		sourceColumn: EndQuarter
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EndMonth
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 83792519-22a3-46bc-8c39-bdc7b0700315
+		summarizeBy: sum
+		sourceColumn: EndMonth
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EndMonthstr
+		dataType: string
+		isHidden
+		lineageTag: 76e859b4-f6fe-4b21-8d4a-1befcf04a5f1
+		summarizeBy: none
+		sourceColumn: EndMonthstr
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EndDay
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 9a407b41-77f4-407c-9d67-b4a6cadeef33
+		summarizeBy: sum
+		sourceColumn: EndDay
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PromotionKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: df328996-4393-4d8c-8046-4fcf8b40432e
+		summarizeBy: none
+		sourceColumn: PromotionKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PromotionLabel
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2a78f6f6-7fbf-47b9-8c62-f9c421d10c5c
+		summarizeBy: sum
+		sourceColumn: PromotionLabel
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PromotionName
+		dataType: string
+		lineageTag: 02e763ea-40ff-437a-a3f6-00d0e94ca968
+		summarizeBy: none
+		sourceColumn: PromotionName
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column StartYear
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 7b6b6ebc-23d1-4b18-b715-110928ee885a
+		summarizeBy: sum
+		sourceColumn: StartYear
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column StartQuarter
+		dataType: string
+		isHidden
+		lineageTag: dd805a2e-5842-4e06-85ef-bb3ed4f44b5e
+		summarizeBy: none
+		sourceColumn: StartQuarter
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column StartMonth
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 33d9dfed-0acd-4791-ae07-413eaf8f31c3
+		summarizeBy: sum
+		sourceColumn: StartMonth
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column StartMonthstr
+		dataType: string
+		isHidden
+		lineageTag: 991576b4-57fa-4cad-9a7a-ba9b74b8a8e2
+		summarizeBy: none
+		sourceColumn: StartMonthstr
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column StartDay
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: fa9f0498-8aab-41b4-8320-45d9988e033d
+		summarizeBy: sum
+		sourceColumn: StartDay
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Promotion Enddate'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2f2019ac-d0ac-408a-ab65-d701173fac2d
+		summarizeBy: none
+		sourceColumn: Promotion Enddate
+
+		variation Variation
+			isDefault
+			relationship: 83f81a71-7399-4026-b6cc-c928b25b90cb
+			defaultHierarchy: LocalDateTable_1977dd1b-21bf-4d05-8505-e519fcc11a11.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Promotion Startdate'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1bbbd904-d429-4e82-9d39-ac8042eb590a
+		summarizeBy: none
+		sourceColumn: Promotion Startdate
+
+		variation Variation
+			isDefault
+			relationship: b25c91d7-c27f-45ae-92e6-88e99ad53f25
+			defaultHierarchy: LocalDateTable_60a0727a-006d-4164-af1a-c07fb81523b0.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Promotions = m
+		mode: import
+		source =
+				let
+				  Bron = Folder.Files("C:\Users\x3ri0\Desktop\Datasets minor\PQ"),
+				  #"Filtered rows" = Table.SelectRows(Bron, each [Extension] = ".parquet"),
+				  #"Filtered hidden files" = Table.SelectRows(#"Filtered rows", each [Attributes]?[Hidden]? <> true),
+				  #"Added custom" = let
+				    rootPath = Text.TrimEnd(Value.Metadata(Value.Type(#"Filtered hidden files"))[FileSystemTable.RootPath]?, "\"),
+				    combinePaths = (path1, path2) => Text.Combine({Text.TrimEnd(path1, "\"), path2}, "\"),
+				    getRelativePath = (path, relativeTo) => Text.Middle(path, Text.Length(relativeTo) + 1)
+				in
+				    Table.AddColumn(#"Filtered hidden files", "Relative Path", each getRelativePath(combinePaths([Folder Path], [Name]), rootPath), type text),
+				  #"Invoke custom function" = Table.AddColumn(#"Added custom", "Transform file", each #"Transform file"([Content])),
+				  #"Drill down" = #"Invoke custom function"{[#"Folder Path" = "C:\Users\x3ri0\Desktop\Datasets minor\PQ\", Name = "Contoso_promotions.parquet"]}[Transform file],
+				    #"Renamed Columns" = Table.RenameColumns(#"Drill down",{{"DiscountPercent", "Discount Percentage"}, {"PromotionEndDate", "Promotion Enddate"}, {"PromotionStartDate", "Promotion Startdate"}})
+				in
+				  #"Renamed Columns"
+
+	annotation PBI_ResultType = Table
+
