@@ -196,7 +196,7 @@ table _Measures
 			    MAX('Trend Metric'[Trend Metric])
 			RETURN
 			    COALESCE(SelectedMetric, "Revenue")
-			        & " contribution by product category"
+			        & " by product category"
 		displayFolder: Titles
 		lineageTag: efe09f17-c24d-41e9-b4d8-76ea5abb56be
 
