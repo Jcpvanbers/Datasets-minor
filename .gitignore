@@ -1,4 +1,3 @@
 /Data/Contoso_Sales.csv
 /PQ/*.parquet
 !PQ/
-*.pbix
