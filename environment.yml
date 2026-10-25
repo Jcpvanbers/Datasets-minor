@@ -26,13 +26,16 @@ dependencies:
       - annotated-types==0.8.0
       - asttokens==3.0.2
       - attrs==26.1.0
+      - bcrypt==5.0.0
       - blinker==1.9.0
       - certifi==2026.10.23
+      - cffi==2.1.1
       - charset-normalizer==3.5.2
       - click==8.5.0
       - colorama==0.4.6
       - comm==0.2.3
       - contourpy==1.4.0
+      - cryptography==50.0.2
       - cycler==0.12.1
       - dash==4.4.1
       - debugpy==1.8.22
@@ -42,6 +45,7 @@ dependencies:
       - fonttools==4.67.0
       - idna==3.20
       - importlib-metadata==10.1.0
+      - invoke==3.0.3
       - ipykernel==7.4.0
       - ipython==9.17.1
       - ipython-pygments-lexers==1.1.1
@@ -64,6 +68,7 @@ dependencies:
       - numpy==2.5.4
       - packaging==26.3
       - pandas==3.1.0
+      - paramiko==5.1.0
       - parso==0.8.7
       - pillow==13.0.0
       - platformdirs==4.13.5
@@ -72,9 +77,11 @@ dependencies:
       - psutil==7.2.2
       - pure-eval==0.2.4
       - pyarrow==26.0.0
+      - pycparser==3.12
       - pydantic==2.14.1
       - pydantic-core==2.50.1
       - pygments==2.21.0
+      - pynacl==1.6.2
       - pyparsing==3.3.3
       - python-dateutil==3.0.0
       - pyzmq==27.2.0
